@@ -1,50 +1,32 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>最好的人机闺蜜</title>  
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
+
+	<title>某某，我爱你 </title>  
+<meta name="keywords" content="" />
+<meta name="description" content="" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<style type="text/css">
 		@font-face {
 			font-family: digit;
-			src: url("digital-7_mono.ttf") format("truetype");
-		}
-		#playButton {
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			background: #ff6b81;
-			color: white;
-			border: none;
-			padding: 10px 15px;
-			border-radius: 5px;
-			cursor: pointer;
-			z-index: 1000;
-			box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-		}
-		#playButton:hover {
-			background: #ff4757;
+			src: url("digital-7_mono.ttf"/*tpa=./digital-7_mono.ttf*/) format("truetype");
 		}
 	</style>
-	<link href="css/default.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/garden.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
-</head>
+	<link href="css/default.css" tppabs="./css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js" tppabs="./js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js" tppabs="./js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js" tppabs="./js/functions.js"></script>
 <body>
 	<div id="mainDiv">
 		<div id="content">
-			<!-- 隐藏的背景音乐播放器 -->
-			<audio id="bgmMusic" preload="auto" loop>
-				<source src="renxi.mp3" type="audio/mpeg">
-				<source src="http://qzone.haoduoge.com/music/C2C3F0LSXH4D771253124A26CF9C71C939B2A.mp3" type="audio/mpeg">
-				您的浏览器不支持音频元素
+			<audio autoplay="autoplay" height="100" width="100">
+				<source src="renxi.mp3" type="audio/mp3" />
+				<embed height="100" width="100" src="renxi.mp3" />
 			</audio>
-			
 			<div id="code">
-				<span class="comments">闺蜜：</span><br />
-				<span class="space"/><span class="comments">好闺蜜，我知道我的粗心让最珍贵的你受委屈了。你每次背过身偷偷红眼眶的样子，比直接骂我千万句更让我心揪着疼。我总笑你像只气鼓鼓的小河豚，其实你每一次皱眉，都是因为我没接住你用心传递的情感信号。</span><br />
+				<span class="comments">某某：</span><br />
+				<span class="space"><span class="comments">我爱你</span></span><br />
+				<span class="space"/><span class="comments">宝贝，我知道我的粗心让最珍贵的你受委屈了。你每次背过身偷偷红眼眶的样子，比直接骂我千万句更让我心揪着疼。我总笑你像只气鼓鼓的小河豚，其实你每一次皱眉，都是因为我没接住你用心传递的情感信号。</span><br />
 				<span class="space"/><span class="comments">你教会我草莓尖尖要留给爱的人，提醒我阴天要带伞，连我游戏连败时都陪着我分析阵容——这样好的你，值得被捧在手心里妥帖收藏。这次是我不对，没有站在你的视角感受情绪的温度差。能给我一个用行动重修「恋爱学分」的机会吗？想牵着你的手补上错过的日落，用你喜欢的抹茶千层贿赂你的笑容，再老老实实当你的专属树洞。</span><br />
 				<span class="space"/><span class="comments">小祖宗，你眼里的光是我最想守护的星辰。以后你的喜怒哀乐，我都保证做最称职的第一接收员，好不好？</span><br />
 			</div>
@@ -52,98 +34,67 @@
 				<canvas id="garden"></canvas>
 				<div id="words">
 					<div id="messages">
-						好龟龟,距离2024年12月8日16:42已经
+						好龟龟, 距离12月7日16：42已经
 						<div id="elapseClock"></div>
 					</div>
 					<div id="loveu">
 						永远爱你，一辈子，不分离！<br/>
-						<div class="signature">- 最爱你的人</div>
-					</div>
+						<div class="signature">- Best friend</div>
+
 				</div>
 			</div>
-		</div>
-		<div class="bg1">	
-			<div class="main">
-				<footer style="line-height:20px">
-					<div id="copyright">
-						<p>
-							<a href='http://51bbw.cn' target="_blank"></a> 
-							<a href="http://ymjzy.net" target="_blank"></a>
-							<a href="" target="_blank"></a>
-						</p>
-					</div>
-				</footer>
-			</div>
+</div>
+	<div class="bg1">	
+		<div class="main">
+			<footer style="line-height:20px">
+                <div id="copyright">
+                  <p><a href='http://51bbw.cn' target="_blank"></a> 
+                    <a href="http://ymjzy.net" target="_blank"></a>
+                    <a href="" target="_blank"></a></p>
+
+                </div>
 		</div>
 	</div>
-	
-	<!-- 音乐播放按钮 -->
-	<button id="playButton">播放音乐</button>
+</div>
 
 	<script type="text/javascript">
-		// 页面加载完成后执行
-		document.addEventListener('DOMContentLoaded', function() {
-			var offsetX = $("#loveHeart").width() / 2;
-			var offsetY = $("#loveHeart").height() / 2 - 55;
-			var together = new Date();
-			together.setFullYear(2024, 11, 7);
-			together.setHours(16);
-			together.setMinutes(42);
-			together.setSeconds(0);
-			together.setMilliseconds(0);
-			
-			if (!document.createElement('canvas').getContext) {
-				var msg = document.createElement("div");
-				msg.id = "errorMsg";
-				msg.innerHTML = "提醒您：您的浏览器版本过旧^_^<br/>"+
-					"推荐使用 <a href='http://dlsw.br.baidu.com/ditui/zujian/bdBrowserSetup-5956-ftn_1000061134.exe' target='_blank'>百度浏览器<br/>请先升级您的浏览器，效果很炫哦~~"; 
-				document.body.appendChild(msg);
-				$("#code").css("display", "none")
-				$("#copyright").css("position", "absolute");
-				$("#copyright").css("bottom", "10px");
-				document.execCommand("stop");
-			} else {
-				setTimeout(function () {
-					adjustWordsPosition();
-					startHeartAnimation();
-				}, 5000);
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2024, 11, 8);
+		together.setHours(16);
+		together.setMinutes(42);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "提醒您：您的浏览器版本过旧^_^<br/>"+
+				"推荐使用 <a href='http://dlsw.br.baidu.com/ditui/zujian/bdBrowserSetup-5956-ftn_1000061134.exe' target='_blank'>百度浏览器<br/>请先升级您的浏览器，效果很炫哦~~"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
 
+			timeElapse(together);
+			setInterval(function () {
 				timeElapse(together);
-				setInterval(function () {
-					timeElapse(together);
-				}, 500);
+			}, 500);
 
-				adjustCodePosition();
-				$("#code").typewriter();
-			}
-			
-			// 音乐播放控制
-			const bgmMusic = document.getElementById('bgmMusic');
-			const playButton = document.getElementById('playButton');
-			
-			// 尝试自动播放
-			const playPromise = bgmMusic.play();
-			
-			if (playPromise !== undefined) {
-				playPromise.catch(error => {
-					// 自动播放被阻止，显示播放按钮
-					playButton.style.display = 'block';
-				});
-			}
-			
-			// 点击播放按钮时播放音乐
-			playButton.addEventListener('click', function() {
-				bgmMusic.play();
-				playButton.style.display = 'none';
-			});
-			
-			// 用户与页面交互后尝试播放
-			document.addEventListener('click', function() {
-				bgmMusic.play().then(() => {
-					playButton.style.display = 'none';
-				}).catch(e => {});
-			}, { once: true });
-		});
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
 	</script>
+    <audio id="bgmMusic" src="http://qzone.haoduoge.com/music/C2C3F0LSXH4D771253124A26CF9C71C939B2A.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
+    
+
+
 </body>
 </html>
